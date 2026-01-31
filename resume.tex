@@ -2,19 +2,30 @@
 \documentclass[11pt,a4paper]{article}
 
 % ---------- Packages ----------
-\usepackage[left=1in, right=0.5in, top=1in, bottom=1in]{geometry}
+\usepackage[left=1in, right=0.5in, top=0.5in, bottom=0.5in]{geometry}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
 \usepackage{parskip}
 \usepackage{setspace}
+\usepackage[none]{hyphenat}
+
 
 % ---------- Formatting ----------
 \setstretch{1.05}
 \titleformat{\section}{\Large\bfseries}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0mm}{5mm}{5mm}
+\titlespacing{\section}{0mm}{5mm}{3mm}
+\titlespacing{\subsection}{0mm}{3mm}{1mm}
 
-\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=1.2em}
+\setlist[itemize]{noitemsep, topsep=2pt, leftmargin=10mm}
+
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\emergencystretch=3em
+\tolerance=2000
+\pretolerance=1000
+
+
 
 \pagenumbering{gobble}
 
@@ -22,7 +33,8 @@
 
 \noindent
 {\Large \bf Pushpkant Yadav}\\[1mm]
-{\bf System Architect – Embedded Systems \& Digital Twin / Virtual Platforms}
+{\bf System Architect - Embedded Systems \& Digital Twin Platforms
+}
 \\[2mm]
 \href{mailto:pushpkantyadav@gmail.com}{pushpkantyadav@gmail.com} $\;|\;$
 +91-9950238365 $\;|\;$
@@ -30,37 +42,94 @@
 \href{https://github.com/Pushpkant}{GitHub}
 \\[2mm]
 {\bf
-Architecting digital twins of complex avionics LRUs for early hardware–software co-design, validation, and system bring-up.}
+Architecting digital twins of complex avionics LRUs for early hardware–software co-design and system bring-up.
+}
 
 \section*{Professional Summary}
-System Architect with 13+ years of experience designing and validating complex embedded systems, with a strong focus on digital twins and virtual platforms for avionics LRUs. Experienced in architecting QEMU-based MPSoC system models to support early software development, driver validation, and system bring-up ahead of hardware availability. Deep hands-on background in Embedded Linux, Zynq UltraScale+ MPSoC architecture, hardware–software co-design, and system-level debugging. Actively drives architectural PoCs, resolves high-impact technical risks, and mentors engineers across disciplines.
+System Architect with 13+ years of experience designing and validating complex embedded systems, with a strong focus on digital twins and virtual platforms for avionics LRUs. Experienced in architecting QEMU-based MPSoC system models to support early software development, driver validation, and system bring-up ahead of hardware availability. Strong background in Embedded Linux, Zynq UltraScale+ MPSoC architecture, hardware–software co-design, and system-level debugging. Drives architectural proof-of-concepts, resolves high-impact technical risks, and mentors engineers across disciplines.
+
 
 \section*{Core Skills}
-\subsection*{System Architecture \& Domain}
+\subsection*{System Architecture, Digital Twin \& Leadership}
+Embedded systems architecture, digital twin \& virtual platforms, avionics LRU systems, hardware–software co-design, architectural definition \& design reviews, proof-of-concepts, technical risk assessment, cross-functional technical mentoring.
+
+\subsection*{Simulation \& Modeling}
+QEMU (board \& peripheral modeling), virtual prototyping, system-level modeling (UML), pre-silicon / pre-hardware validation, SystemC (TLM 2.0 – working knowledge), transaction-level modeling (conceptual).
+
+\subsection*{Platforms, Processors \& Software}
+Zynq UltraScale+ MPSoC (Cortex-A53 / R5 / PL), ARM Cortex-A/R/M, RISC-V (bare-metal \& RTOS), Embedded Linux, Yocto (PetaLinux, Processor SDK Linux), BSP \& boot flow bring-up, Linux device drivers, memory map, interrupts \& DMA, system debugging \& root-cause analysis.
+
+\subsection*{FPGA, Interfaces \& Timing}
+Vivado Design Suite, AXI bus architecture, custom PL IP integration, Verilog (design review \& debug level), SPI, I2C, UART, PCIe, USB, Ethernet, IEEE-1588 PTP, NTP, GPS.
+
+
+\section*{Work Experience}
+
+\subsection*{Honeywell Technology Solution}
+System Architect - Embedded Systems \& Digital Twin Platforms\\
+Sep 2024 - Present
 \begin{itemize}
-\item
-Embedded System Architect
-\item
-Digital Twin \& Virtual Platform Design
-\item
-Avionics LRU Systems
-\item
-Hardware-Software Co-Design
-\item
-Real-time \& Safety Critical Systems
+\item 
+Architecting QEMU-based digital twins of aerospace avionics LRUs built on Zynq UltraScale+ MPSoC platforms to enable early hardware–software co-design and system-level validation.
+\item 
+Defined system architecture and abstraction strategies for modeling MPSoC processing systems, programmable logic interfaces, and multiple COTS peripherals within the virtual platform.
+\item 
+Enabled Embedded Linux boot, driver validation, and application bring-up on virtual platforms ahead of physical hardware availability, significantly reducing dependency on additional hardware for development and validation.
+\item 
+Led architectural proof-of-concepts and resolved complex system-level issues spanning simulation models, boot flows, and low-level software interactions.
+\item 
+Developed an architectural proof-of-concept simulating MPSoC RPU execution in QEMU with selected PL peripherals modeled in SystemC, including functional synchronization between QEMU and SystemC for system-level digital twin validation.
+\item 
+Architected a Linux-based, multi-tenant simulation platform enabling thousands of users to execute virtual system simulations remotely, providing a scalable alternative to physical hardware test benches.
+\item 
+Extended the simulation platform to support remote debugging workflows, enabling users to attach local debuggers to virtual targets and use the simulator as a functional replacement for physical test benches in VectorCast-driven execution environments.
+\item 
+Designed and validated scalable simulation capacity, supporting approximately 500–600 concurrent virtual instances for lightweight systems and 100–150 instances for hardware-intensive configurations per server.
+\item 
+Collaborated with and mentored FPGA, hardware, and software teams on MPSoC architecture, virtual platform workflows, and system-level debugging.
 \end{itemize}
 
-\subsection*{Simulation \& Modelling}
-\begin{itemize}
-\item
-QEMU (Board and Peripheral Modelling)
-\item
-Virtual Prototyping
-\item
-System Level Modelling (UML)
-\item
+\subsection*{Logic Fruit Technologies}
+Project Lead – Embedded Systems\\
+Sep 2021 – Sep 2024
 
+\begin{itemize}
+\item Led system architecture and Embedded Linux platform development for complex telecom and defense-grade embedded systems.
+\item Designed and integrated MPSoC- and FPGA-based platforms, including device drivers, BSP bring-up, and high-speed interface integration.
+\item Architected and implemented IEEE 1588 Precision Time Protocol (PTP) solutions for timing-critical systems, including PHC clock integration and driver support.
+\item Mentored engineers across software, FPGA, and hardware domains, driving architectural reviews and technical decision-making.
 \end{itemize}
+
+\subsection*{Noble Labs}
+Embedded Systems Consultant / Projects Leader (Owned Firm)\\
+Feb 2018 – Sep 2021
+
+\begin{itemize}
+\item Architected and delivered end-to-end embedded systems spanning hardware, firmware, and Embedded Linux platforms.
+\item Led system bring-up, validation, and customer-facing technical engagements across multiple embedded product domains.
+\end{itemize}
+
+\subsection*{NeuroEquilibrium Diagnostic Systems Pvt. Ltd.}
+R\&D Manager / Senior Embedded Engineer\\
+Jun 2015 – Feb 2018
+
+\begin{itemize}
+\item Designed and validated real-time embedded systems for medical diagnostic devices, integrating sensors, control systems, and signal processing pipelines.
+\item Led architecture definition and system-level debugging for safety- and reliability-critical embedded products.
+\end{itemize}
+
+\subsection*{CadBridge Semiconductor Pvt. Ltd.}
+Junior Embedded Systems Engineer\\
+Feb 2013 – May 2015
+
+\begin{itemize}
+\item Developed low-level firmware and hardware interface code for embedded platforms, building a strong foundation in system bring-up and debugging.
+\end{itemize}
+
+\section*{Education}
+
+M.Tech – Embedded Systems, BITS Pilani (WILP), 2025\\
+B.Tech – Electronics \& Communication Engineering, RTU, 2011
 
 
 \end{document}
